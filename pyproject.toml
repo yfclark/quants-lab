@@ -1,10 +1,46 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "quants-lab"
+version = "0.1.0"
+description = "A project description"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "1.4"
+hummingbot = "*"
+numpy = "1.26.4"
+plotly = "*"
+pycoingecko = "*"
+geckoterminal-py = "*"
+glom = "*"
+defillama = "*"
+statsmodels = "*"
+pandas-ta = "0.3.14b"
+pyyaml = "*"
+jupyter = "*"
+optuna = "*"
+optuna-dashboard = "*"
+pathlib = "*"
+pydantic = "1.10.4"
+scikit-learn = "*"
+commlib-py = "*"
+rich = "*"
+python-dotenv = "*"
+asyncpg = "*"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "*"
+isort = "*"
+flake8 = "*"
 
 [tool.black]
 line-length = 130
-target-version = ["py38"]
+target-version = ["py310"]
 
 [tool.isort]
 line_length = 130
